@@ -3,7 +3,7 @@ require 'date'
 def push(date)
   gitdate = date.strftime("%a %b %d %X %Y %z -0400")
   10.times do
-    cmd = "echo '123' > 'tmp';
+    cmd = "echo '#{Time.now}' > 'tmp';
       git add .;
       export GIT_AUTHOR_DATE='#{gitdate}';
       export GIT_COMMITTER_DATE='#{gitdate}';
